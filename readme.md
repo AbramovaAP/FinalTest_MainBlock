@@ -100,4 +100,3 @@ void PrintArray(string [] mass)
 
 ## Часть добавленных commit:
 ![Крайние commit, которые были отправлены на удаленный репозиторий](commit.png)
-
