@@ -93,4 +93,6 @@ void PrintArray(string [] mass)
 
     PrintArray(EndMass(mass));
 ```
+## Реализация кода программы:
+![Вывод результата программы](Resultat_of_the_code.png)
 
