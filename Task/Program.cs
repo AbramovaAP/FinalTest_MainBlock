@@ -63,7 +63,7 @@ string [] EndMass(string [] mass)
 //4. Зададим функцию для вывода красивого результата, как по примеру:
 void PrintArray(string [] mass)
 {
-    Console.WriteLine($"3. Строковый массив из элементов удовлетворяющих условию:");
+    Console.WriteLine($"3. Строковый массив из элементов введенного массива удовлетворяющих условию:");
     Console.Write("[");
     for (int i = 0; i < mass.Length - 1; i++)
     {
