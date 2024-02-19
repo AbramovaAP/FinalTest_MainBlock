@@ -32,7 +32,26 @@ Console.WriteLine();
 // Console.WriteLine($"{mass[3]}");
 // Console.WriteLine();
 
-//3. Воспользуемся функцией для определения элементов, удовлетворяющих условию задачи:
+//3. Воспользуемся функциями для определения элементов, удовлетворяющих условию задачи:
+
+//НЕТ элементов для нового массива
+bool EndNullMass(string [] mass)
+{
+  int count = 0; //количество элементов в новом массиве
+
+  //Цикл для определения количества элементов в новом массиве
+  for (int i = 0; i < mass.Length; i++)
+  {
+    if(mass[i].Length <= 3) // если условие выполняется, то увеличиваем счетчик элементов
+    {count++;}
+  }
+
+  if (count == 0)  
+    {return true;}
+  return false;
+}
+
+//ЕСТЬ элементы для нового массива
 string [] EndMass(string [] mass)
 {
   int count = 0; //количество элементов в новом массиве
@@ -76,5 +95,12 @@ void PrintArray(string [] mass)
     // Console.WriteLine($"{mass[2]}");
     // Console.WriteLine();
 }
-
-PrintArray(EndMass(mass));
+if (EndNullMass(mass)) //Если вернулось значение true, т.е. count = 0
+{
+  Console.WriteLine($"3. Строковый массив из элементов введенного массива удовлетворяющих условию:");
+  Console.WriteLine("[]");
+}
+else //Иначе, т.е. count = 0 и => вернули значение false, выводим красивый результат
+{
+  PrintArray(EndMass(mass));
+}
